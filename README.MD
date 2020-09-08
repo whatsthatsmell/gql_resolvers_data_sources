@@ -1,6 +1,6 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 ![Vim](https://img.shields.io/badge/editor-Vim-green?logo=vim&style=plastic)
-# GraphQL Schema Design
+# GraphQL Resolvers and Data Sources
 
 ## How did we get here?
 ### GraphQL Schema Design
