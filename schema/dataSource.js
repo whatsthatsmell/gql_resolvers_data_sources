@@ -8,8 +8,8 @@ module.exports = async () => {
   return roster
 }
 
-module.exports.getTeam = async () => {
-  const url = 'https://statsapi.mlb.com/api/v1/teams/119'
+module.exports.getTeam = async (teamId) => {
+  const url = 'https://statsapi.mlb.com/api/v1/teams/' + teamId
   const { body: { teams: [team] } } = await got(url, { responseType: 'json' })
   return team
 }

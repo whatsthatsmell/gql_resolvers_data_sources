@@ -17,8 +17,8 @@ describe('dataSource', () => {
       .replyWithFile(200, `${__dirname}/fixtures/team.json`, {
         'Content-Type': 'application/json'
       })
-    const team = await ds.getTeam()
+    const team = await ds.getTeam(119)
     expect(team).toEqual(expect.any(Object))
-    // expect(roster[0].person.fullName).toBe('Adam Kolarek')
+    expect(team.venue.name).toBe('Dodger Stadium')
   })
 })
