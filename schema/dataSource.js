@@ -9,5 +9,7 @@ module.exports = async () => {
 }
 
 module.exports.getTeam = async () => {
-  return {}
+  const url = 'https://statsapi.mlb.com/api/v1/teams/119'
+  const { body: { teams: [team] } } = await got(url, { responseType: 'json' })
+  return team
 }
