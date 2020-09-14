@@ -7,3 +7,7 @@ module.exports = async () => {
   const { body: { roster } } = await got(url, { responseType: 'json' })
   return roster
 }
+
+module.exports.getTeam = async () => {
+  return {}
+}
