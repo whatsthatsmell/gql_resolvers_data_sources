@@ -109,7 +109,8 @@ describe('team resolvers', () => {
 
   ds.getTeam.mockResolvedValue(teamFixture)
   test('team should be an object', async () => {
-    const dodgers = await resolvers.Query.team()
-    expect(dodgers).toBe(expect.any(Object))
+    const dodgers = await resolvers.Query.team(teamFixture, { id: 119 })
+    expect(dodgers).toStrictEqual(teamFixture)
+    expect(dodgers.id).toBe(119)
   })
 })
