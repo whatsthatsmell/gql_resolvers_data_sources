@@ -32,6 +32,11 @@ type League {
 
 type Query {
   players: [Player]
-  team: Team
+}
+
+extend type Query {
+  team(
+    id:ID!
+  ):Team
 }
 `

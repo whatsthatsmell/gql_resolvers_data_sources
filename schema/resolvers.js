@@ -10,6 +10,10 @@ module.exports = {
           position: player.position.name
         }
       })
+    },
+    async team (_, { id }) {
+      const team = await ds.getTeam(id)
+      return team
     }
   }
 }
